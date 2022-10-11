@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 16:12:47 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/11 00:07:11 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/11 13:29:47 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/11 22:40:32 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	int	x;
-
+	size_t	x;
+	char	*cdest;
+	char	*csrc;
+	
+	cdest = (char *)dest;
+	csrc = (char *)src;
+	//len = ft_strlen(src);
 	x = 0;
-	if (c == '\0')
-		return ("");
-	while (str[x] != '\0')
+	while (x < len)
 	{
-		if (str[x] == c)
-		{
-			return ((char *) &str[x]);
-		}
+		cdest[x] = csrc[x];
 		x++;
 	}
-	
-	return (0);
+	return (dest);
+}
+
+int main()
+{
+	char a[20];
+	char b[] = "Marouane";
+
+	printf("%s\n", memmove(a, 0, 3));
+	printf("%s\n", b);
+	// printf("%s\n", ft_memmove(a, 0, 3));
+	// printf("%s\n", b);
 }

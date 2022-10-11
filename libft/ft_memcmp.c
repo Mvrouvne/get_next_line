@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 16:12:47 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/11 00:07:11 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/11 12:36:31 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/11 13:22:44 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	x;
+	size_t	x;
+	char	*cs1;
+	char	*cs2;
 
+	cs1 = (char *)s1;
+	cs2 = (char *)s2;
 	x = 0;
-	if (c == '\0')
-		return ("");
-	while (str[x] != '\0')
+	while (x < n)
 	{
-		if (str[x] == c)
+		if (cs1[x] != cs2[x])
 		{
-			return ((char *) &str[x]);
+			return (cs1[x] - cs2[x]);
 		}
 		x++;
 	}
-	
 	return (0);
 }
