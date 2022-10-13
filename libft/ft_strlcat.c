@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 13:20:12 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/12 16:32:28 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/13 00:41:01 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		}
 		dest[x] = '\0';
 	}
-	return (x + z);
+	return (x + y);
 }
 
 int	main()
 {
-	char a[15] = "Hi ";
-	char b[15] = "Marouane";
+	char a[10] = "Hi";
+	char *b = "Mkfghkhlfglhkfhlgharouane";
 
-	printf("%zu\n", ft_strlcat(a, b, 2));
+	// printf("%zu\n", ft_strlcat(a, b, 2));
+	// printf("%s\n", a);
+	printf("%lu\n", strlcat(a, b, 2));
 	printf("%s\n", a);
-	//printf("%lu\n", strlcat(a, b, 2));
-	//printf("%s\n", a);
 }

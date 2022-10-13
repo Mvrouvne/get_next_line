@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 23:23:27 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/09 16:22:41 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:22:25 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,14 @@
 void	*ft_memset(void *str, int c, size_t len)
 {
 	size_t	x;
+	char	*cstr;
 
+	cstr = ((char *)str);
 	x = 0;
-	while (x < len && str[x])
+	while (x < len)
 	{
-		str[x] 
+		cstr[x] = c;
 		x++;
 	}
-}
-
-int	main()
-{
-	char *a = "Marouane";
-	int	x = '$';
-
-	printf("%s", ft_memset(a, x, 3));
+	return (str);
 }

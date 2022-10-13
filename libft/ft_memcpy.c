@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:51:33 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/11 18:46:45 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:14:51 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,11 @@ for (i=0; i<n; i++)
 	printf("%d ", idest[i]);
 return 0;
 }*/
+int main()
+{
+	int destination[3];
+	int source[3] = {1, 2, 3};
+	
+	//printf("%s", ft_memcpy(destination, source, 3));
+	printf("%d", memcpy(destination, source, 3));
+}

@@ -1,33 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 19:39:09 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/13 00:42:52 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/13 16:43:05 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/13 18:22:54 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	x;
 	size_t	y;
 
 	x = 0;
-	y = 0;
-	x = ft_strlen(src);
-	if (size > 0)
+	if (to_find[0] == '\0')
+		return (str);
+	while (x < len)
 	{
-		while (y < size - 1 && src[y] != '\0')
+		y = x + 1;
+		while (to_find[y] == str[x + y])
 		{
-			dest[y] = src[y];
+			if (to_find[y + 1] == '\0')
+			{
+				return (&str[x]);
+			}
 			y++;
 		}
+		y = 0;
+		x++;
 	}
-	dest[y] = '\0';
-	return (x);
+	return (0);
+}
+ #include <string.h>h>
+int main()
+{
+	char a[] = "My name is Marouane";
+	char b[] = "is";
+
+	printf("%d", ft_srtnstr(a, b, 30));
+	//printf("%s", srtnstr(a, b, 30));
 }

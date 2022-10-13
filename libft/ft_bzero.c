@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 12:28:34 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/13 00:39:17 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/12 21:26:52 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/12 21:44:40 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_bzero(void *str, size_t n)
 {
-	int	a;
-	int	b;
-	int	c;
+	size_t	x;
+	char	*cstr;
 
-	a = 0;
-	b = 1;
-	c = 0;
-	while ((str[a] >= 9 && str[a] <= 13) || str[a] == ' ')
-		a++;
-	if (str[a] == '-')
+	cstr = ((char *)str);
+	x = 0;
+	if (n > 0)
 	{
-		b = b * -1;
-		a++;
+		while (x < n)
+		{
+			cstr[x] = '\0';
+			x++;
+		}
 	}
-	else if (str[a] == '+')
-		a++;
-	while (str[a] >= '0' && str[a] <= '9')
-	{
-		c = (c * 10) + (str[a] - '0');
-		a++;
-	}
-	return (c * b);
 }

@@ -6,12 +6,11 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:12:47 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/11 00:07:11 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/13 00:44:14 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -28,6 +27,5 @@ char	*ft_strchr(const char *str, int c)
 		}
 		x++;
 	}
-	
 	return (0);
 }
