@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 16:43:05 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/13 18:22:54 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/13 23:27:53 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/14 00:33:19 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,32 +16,24 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	x;
 	size_t	y;
+	char	*string;
 
-	x = 0;
+	string = ((char *)str);
 	if (to_find[0] == '\0')
-		return (str);
+		return (string);
+	x = 0;
 	while (x < len)
 	{
-		y = x + 1;
-		while (to_find[y] == str[x + y])
+		y = 0;
+		while (to_find[y] == string[x + y])
 		{
 			if (to_find[y + 1] == '\0')
 			{
-				return (&str[x]);
+				return (&string[x]);
 			}
 			y++;
 		}
-		y = 0;
 		x++;
 	}
 	return (0);
-}
- #include <string.h>h>
-int main()
-{
-	char a[] = "My name is Marouane";
-	char b[] = "is";
-
-	printf("%d", ft_srtnstr(a, b, 30));
-	//printf("%s", srtnstr(a, b, 30));
 }
