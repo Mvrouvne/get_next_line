@@ -6,13 +6,13 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:29:47 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/14 17:43:24 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:44:08 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	size_t	x;
 	char	*cdest;
@@ -25,13 +25,13 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 	{
 		while (len > 0)
 		{
-			cdest[size - 1] = csrc[size - 1];
-			x--;
+			cdest[len - 1] = csrc[len - 1];
+			len--;
 		}
 	}
 	else
 	{
-		while (x < size)
+		while (x < len)
 		{
 			cdest[x] = csrc[x];
 			x++;
@@ -41,11 +41,11 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 }
 int main()
 {
-	char a[15] = "Hi ";
-	char b[15] = "Marouane";
+	
+	char b[15] = "123abcd";
 
-	printf("%s\n", memmove(a, b, sizeof(char) * 15));
-	printf("%s\n", b);
-	// printf("%s\n", ft_memmove(a, b, sizeof(char) * 15));
-	// printf("%s\n", b);
+	//printf("%s\n", memmove(b + 1, b + 2, 2));
+	//printf("%s\n", a);
+	printf("%s\n", ft_memmove(b + 2, b + 1, 2));
+	//printf("%s\n", a);
 }

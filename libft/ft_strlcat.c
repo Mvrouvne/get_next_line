@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 13:20:12 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/13 00:41:01 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/15 17:56:17 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,20 @@
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	x;
-	size_t	y;
-	size_t	z;
+	size_t	ldest;
+	size_t	lsrc;
 
-	x = ft_strlen(dest);
-	z = ft_strlen(src);
-	y = 0;
-	if (size > 0)
+	ldest = ft_strlen(dest);
+	lsrc = ft_strlen(src);
+	x = 0;
+	if (size == 0 || size <= ldest)
+		return (lsrc + size);
+	while (src[x] != '\0' && x < size - ldest - 1)
 	{
-		while (y < size - x - 1 && src[y] != '\0')
-		{
-			dest[x] = src[y];
-			x++;
-			y++;
-		}
-		dest[x] = '\0';
+		dest[ldest] = src[x];
+		ldest++;
+		x++;
 	}
-	return (x + y);
-}
-
-int	main()
-{
-	char a[10] = "Hi";
-	char *b = "Mkfghkhlfglhkfhlgharouane";
-
-	// printf("%zu\n", ft_strlcat(a, b, 2));
-	// printf("%s\n", a);
-	printf("%lu\n", strlcat(a, b, 2));
-	printf("%s\n", a);
+	dest[ldest] = '\0';
+	return (ldest + lsrc);
 }

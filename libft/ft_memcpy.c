@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:51:33 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/13 14:14:51 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/15 21:01:01 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*csrc;
 	char	*cdest;
 
+	if (!dest && !src)
+		return 0;
+	
 	csrc = (char *)src;
 	cdest = (char *)dest;
 	x = 0;
@@ -45,11 +48,13 @@ for (i=0; i<n; i++)
 	printf("%d ", idest[i]);
 return 0;
 }*/
-int main()
+/* int main()
 {
 	int destination[3];
 	int source[3] = {1, 2, 3};
-	
+	int i = 0;
 	//printf("%s", ft_memcpy(destination, source, 3));
-	printf("%d", memcpy(destination, source, 3));
-}
+	ft_memcpy(NULL, destination, 3);
+	while(i < 3)
+		printf("%d", destination[i++]);
+} */
