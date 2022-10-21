@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:39:09 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/18 13:03:59 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/21 00:40:56 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	x;
 	size_t	y;
 
-	x = 0;
 	y = 0;
 	x = ft_strlen(src);
 	if (size > 0)
@@ -27,7 +26,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 			dest[y] = src[y];
 			y++;
 		}
-	}
 	dest[y] = '\0';
+	}
 	return (x);
 }

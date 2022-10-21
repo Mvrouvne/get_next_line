@@ -1,48 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 20:54:10 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/21 23:31:59 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/21 15:49:08 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/22 00:43:52 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void    ft_putendl_fd(char *s, int fd)
 {
-	int		j;
-	int		i;
-	char	*join;
+    int x;
 
-	if (!s1 || !s2)
-		return (NULL);
-	join = malloc(sizeof(char) * (ft_strlen(s2) + ft_strlen(s1) + 1));
-	if (!join)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-	{
-		join[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		join[i] = s2[j];
-		j++;
-		i++;
-	}
-	join[i] = '\0';
-	return (join);
+    if (!s)
+		return ;
+    x = 0;
+    while (s[x] != '\0')
+    {
+        write(fd, &s[x], 1);
+        x++;
+    }
+    write(fd, "\n", 1);
 }
+
+// #include <fcntl.h>
+
 // int main()
 // {
-// 	char *a = "Hello ";
-// 	char *b = "World!";
-
-// 	printf("%s", ft_strjoin(a, b));
+//     int fd1 = open ("t1", O_RDWR);
+//     int fd2 = open ("t2", O_RDWR);;
+//     int fd3 = open ("t3", O_RDWR);;
+//     ft_putendl_fd("Hello World!", fd2);
+//     printf("1 ==%d, 2 == %d  , 3 == %d\n", fd1, fd2, fd3);
 // }

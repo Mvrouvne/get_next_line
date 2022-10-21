@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:34 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/18 12:57:45 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/22 00:35:48 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	a;
-	int	b;
-	int	c;
+	long long int	a;
+	long long int	b;
+	long long int	c;
 
 	a = 0;
 	b = 1;

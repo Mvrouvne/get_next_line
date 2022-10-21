@@ -6,7 +6,7 @@
 #    By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:16:49 by machaiba          #+#    #+#              #
-#    Updated: 2022/10/17 19:26:34 by machaiba         ###   ########.fr        #
+#    Updated: 2022/10/21 22:41:06 by machaiba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS = ft_atoi.c\
 		ft_memset.c\
 		ft_strdup.c \
 		ft_strlcpy.c\
+		ft_strlcat.c\
 		ft_strncmp.c\
 		ft_strrchr.c\
 		ft_toupper.c\
@@ -45,6 +46,12 @@ SRCS = ft_atoi.c\
 		ft_tolower.c\
 		ft_substr.c\
 		ft_strjoin.c\
+		ft_strtrim.c\
+		ft_putchar_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c
+		
 
 OBJ = $(SRCS:.c=.o)
 

@@ -6,13 +6,14 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 23:00:10 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/17 19:26:07 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/21 13:16:40 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 #include <stdio.h>
@@ -25,6 +26,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	ft_bzero(void *str, size_t n);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *str, int c);
@@ -37,5 +39,7 @@ int	    ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 #endif

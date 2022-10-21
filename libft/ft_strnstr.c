@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:27:53 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/18 13:02:16 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/22 00:32:59 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	char	*string;
 
 	string = ((char *)str);
+	x = 0;
+	if (len == 0 && !str)
+		return  NULL;
 	if (to_find[0] == '\0')
 		return (string);
-	x = 0;
-	while (x < len)
+	while (string[x] && x < len)
 	{
 		y = 0;
-		while (to_find[y] == string[x + y])
+		while (to_find[y] == string[x + y] && (x + y) < len)
 		{
 			if (to_find[y + 1] == '\0')
 			{
@@ -35,5 +37,5 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		}
 		x++;
 	}
-	return (0);
+	return (NULL);
 }
