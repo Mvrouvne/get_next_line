@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:12:47 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/20 23:49:07 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:59:01 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *str, int c)
 		}
 		x++;
 	}
-	if(str[x] == c)
+	if (str[x] == c)
 		return ((char *)&str[x]);
 	return (0);
 }

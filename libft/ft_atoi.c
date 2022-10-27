@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:34 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/22 00:35:48 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:44:56 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	long long int	a;
-	long long int	b;
-	long long int	c;
+	int	a;
+	int	b;
+	unsigned long int	c;
 
 	a = 0;
 	b = 1;
@@ -35,5 +35,9 @@ int	ft_atoi(const char *str)
 		c = (c * 10) + (str[a] - '0');
 		a++;
 	}
+	if (c > __LONG_MAX__ && b == 1)
+		return (-1);
+	else if (c > __LONG_MAX__ && b == -1)
+		return (0);
 	return (c * b);
 }

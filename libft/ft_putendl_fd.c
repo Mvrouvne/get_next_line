@@ -6,29 +6,28 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:49:08 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/22 00:43:52 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/25 22:54:45 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    int x;
+	int	x;
 
-    if (!s)
+	if (!s)
 		return ;
-    x = 0;
-    while (s[x] != '\0')
-    {
-        write(fd, &s[x], 1);
-        x++;
-    }
-    write(fd, "\n", 1);
+	x = 0;
+	while (s[x] != '\0')
+	{
+		write(fd, &s[x], 1);
+		x++;
+	}
+	write(fd, "\n", 1);
 }
 
 // #include <fcntl.h>
-
 // int main()
 // {
 //     int fd1 = open ("t1", O_RDWR);

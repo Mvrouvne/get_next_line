@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:44:52 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/22 00:43:03 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/25 18:29:58 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int x;
+	int	x;
 
 	x = 0;
 	if (!s)

@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 20:54:10 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/21 23:31:59 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:49:45 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		j;
-	int		i;
+	int		x;
+	int		y;
 	char	*join;
 
 	if (!s1 || !s2)
@@ -23,20 +23,20 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join = malloc(sizeof(char) * (ft_strlen(s2) + ft_strlen(s1) + 1));
 	if (!join)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
+	x = 0;
+	y = 0;
+	while (s1[x])
 	{
-		join[i] = s1[i];
-		i++;
+		join[x] = s1[x];
+		x++;
 	}
-	while (s2[j])
+	while (s2[y])
 	{
-		join[i] = s2[j];
-		j++;
-		i++;
+		join[x] = s2[y];
+		y++;
+		x++;
 	}
-	join[i] = '\0';
+	join[x] = '\0';
 	return (join);
 }
 // int main()

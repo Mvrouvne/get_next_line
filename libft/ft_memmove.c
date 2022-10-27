@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:29:47 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/21 00:26:50 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:36:37 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	cdest = ((char *)dest);
 	csrc = ((char *)src);
-	x = 0;
+	x = -1;
 	if (!src && !dest)
 		return (NULL);
 	if (dest > src)
@@ -33,17 +33,13 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	else
 	{
-		while (x < len)
-		{
+		while (x++ < len)
 			cdest[x] = csrc[x];
-			x++;
-		}
 	}
 	return (dest);
 }
 // int main()
 // {
-	
 // 	char b[15] = "123abcd";
 
 // 	//printf("%s\n", memmove(b + 1, b + 2, 2));

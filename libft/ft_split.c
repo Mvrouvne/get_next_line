@@ -6,48 +6,70 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:59:25 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/22 00:54:15 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/27 00:30:50 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+static int	wnumber(const char *str, char c)
 {
-	size_t	x;
-	size_t	nword;
-	size_t	nchar;
-	char	*cs;
+	int	x;
+	int	nword;
 
 	x = 0;
 	nword = 0;
-	nchar = 0;
-	cs = ((char *)s);
-	while (s[x] != '\0')
+	while (str[x])
 	{
-		if ((x == 0 && s[x] != c) || (s[x - 1] == c &&  s[x] != c)) 
+		if ((str[x] != c && x == 0) || (str[x] != c && str[x - 1] == c))
 		{
+			x++;
 			nword++;
 		}
-		x++;
-		
-		//hna ghadi alloqui l kol word rassha 
+		if (str[x] != '\0')
+			x++;
 	}
-	printf("%zu\n", nword);
-	printf("%zu\n", nchar);
+	return (nword);
 }
-	char *a = "my name   is Marouane";
-	while(a[i])
-	{
-		while (a[i] != c)
-			i++; // hna 3andk len dyal awal kalmma
-			j = i;
-		while (a[i] == c )
-			i++; // katskippi separatoors
-		//hna alloqui l kelma str = malloc 
-	}
-int main()
-{
 
-	printf("%d", ft_split(a, ' '));
+char	**ft_split(char const *s, char c)
+{
+	char	**str;
+	int		nword;
+	int		x;
+	int		y;
+	int		index;
+
+	x = 0;
+	y = 0;
+	if (!s)
+		return (NULL);
+	nword = wnumber(s, c);
+	str = (char **)malloc(sizeof(char *) * (nword + 1));
+	if (!str)
+		return (NULL);
+	while (y < nword)
+	{
+		while (s[x] == c && s[x] != '\0')
+			x++;
+		index = x;
+		while (s[x] != c && s[x] != '\0')
+			x++;
+		str[y++] = ft_substr(s, index, x - index);
+	}
+	str[y] = NULL;
+	return (str);
+	free (str);
 }
+
+// int	main()
+// {
+// 	char **str;
+// 	char ss[] = "  he lo  wo ld  ";
+
+// 	str = ft_split(ss, ' ');
+
+// 	int i = 0;
+// 	while (str[i])
+// 		printf("%s\n", str[i++]);
+// }

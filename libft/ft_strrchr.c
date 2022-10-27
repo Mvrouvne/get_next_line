@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 20:57:32 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/21 00:18:21 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/24 00:01:11 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int x;
+	int	x;
 
 	x = ft_strlen(str);
 	while (x >= 0)

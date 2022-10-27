@@ -1,37 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 21:27:47 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/24 00:00:26 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/25 15:51:27 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/25 18:51:48 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t			x;
-	unsigned char	*cs1;
-	unsigned char	*cs2;
+	// char			*str;
+	size_t	x;
 
-	cs1 = (unsigned char *)s1;
-	cs2 = (unsigned char *)s2;
+	 if (!s)
+	 	return ;
 	x = 0;
-	while ((x < n) && (cs1[x] != '\0' || cs2[x] != '\0'))
+	while (x < ft_strlen(s))
 	{
-		if (cs1[x] > cs2[x])
-		{
-			return (1);
-		}
-		else if (cs1[x] < cs2[x])
-		{
-			return (-1);
-		}
+		(*f)(x, &s[x]);
 		x++;
 	}
-	return (0);
 }
+
+// void	add(unsigned int a, char *b)
+// {
+// 	(void)a;
+// 	if (*b >= 'a' && *b <= 'z')
+// 		*b = *b - 32;
+// }
+
+// int	main()
+// {
+// 	void (*f)(unsigned int, char*);
+// 	f = &add;
+	
+// 	char s[] = "hello World";
+// 	ft_striteri(s, f);
+// 	printf("%s\n", s);
+// }

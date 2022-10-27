@@ -6,13 +6,13 @@
 #    By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:16:49 by machaiba          #+#    #+#              #
-#    Updated: 2022/10/21 22:41:06 by machaiba         ###   ########.fr        #
+#    Updated: 2022/10/26 23:31:56 by machaiba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 
 AR = ar
 
@@ -50,7 +50,11 @@ SRCS = ft_atoi.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c\
+		ft_itoa.c\
+		ft_strmapi.c\
+		ft_striteri.c\
+		ft_split.c
 		
 
 OBJ = $(SRCS:.c=.o)

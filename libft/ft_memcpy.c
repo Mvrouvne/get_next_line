@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:51:33 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/15 21:01:01 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:51:47 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*cdest;
 
 	if (!dest && !src)
-		return 0;
-	
+		return (0);
 	csrc = (char *)src;
 	cdest = (char *)dest;
 	x = 0;

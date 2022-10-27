@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:27:53 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/22 00:32:59 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/24 00:00:53 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	string = ((char *)str);
 	x = 0;
 	if (len == 0 && !str)
-		return  NULL;
+		return (NULL);
 	if (to_find[0] == '\0')
 		return (string);
 	while (string[x] && x < len)
