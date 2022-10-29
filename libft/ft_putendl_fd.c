@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:49:08 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/25 22:54:45 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/29 16:51:41 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_putendl_fd(char *s, int fd)
 // #include <fcntl.h>
 // int main()
 // {
-//     int fd1 = open ("t1", O_RDWR);
+//     int fd1 = open ("t1", O_CREAT |O_RDWR);
 //     int fd2 = open ("t2", O_RDWR);;
 //     int fd3 = open ("t3", O_RDWR);;
 //     ft_putendl_fd("Hello World!", fd2);

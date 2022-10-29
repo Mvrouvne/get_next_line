@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 23:00:10 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/26 23:32:21 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:06:53 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <stdlib.h>
 #include <stdio.h>
 
+typedef struct s_list
+	{
+		void			*content; // value
+		struct s_list	*next;
+	}					t_list;
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -52,10 +57,8 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);
-typedef struct s_list
-	{
-		void			*content;
-		struct s_list	*next;
-	}					t_list;
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+// int		ft_lstsize(t_list *lst);
 
 #endif

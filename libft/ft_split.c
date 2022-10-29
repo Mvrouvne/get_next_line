@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:59:25 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/27 00:30:50 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:43:25 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,27 @@ static int	wnumber(const char *str, char c)
 	return (nword);
 }
 
-char	**ft_split(char const *s, char c)
+void	ft_mar1(char **str, int nword)
 {
-	char	**str;
-	int		nword;
-	int		x;
-	int		y;
-	int		index;
+	int	y;
+
+	y = 0;
+	while (y < nword)
+	{
+		free (str[y]);
+		y++;
+	}
+	free (str);
+}
+
+void	ft_allocation(char **str, const char *s, int nword, char c)
+{
+	int	y;
+	int	x;
+	int	index;
 
 	x = 0;
 	y = 0;
-	if (!s)
-		return (NULL);
-	nword = wnumber(s, c);
-	str = (char **)malloc(sizeof(char *) * (nword + 1));
-	if (!str)
-		return (NULL);
 	while (y < nword)
 	{
 		while (s[x] == c && s[x] != '\0')
@@ -57,19 +62,41 @@ char	**ft_split(char const *s, char c)
 			x++;
 		str[y++] = ft_substr(s, index, x - index);
 	}
+	if (!str)
+		ft_mar1(str, nword);
 	str[y] = NULL;
-	return (str);
-	free (str);
 }
 
-// int	main()
-// {
-// 	char **str;
-// 	char ss[] = "  he lo  wo ld  ";
+char	**ft_split(char const *s, char c)
+{
+	char	**str;
+	int		nword;
 
-// 	str = ft_split(ss, ' ');
+	if (!s)
+		return (NULL);
+	nword = wnumber(s, c);
+	str = (char **)malloc(sizeof(char *) * (nword + 1));
+	if (!str)
+		return (NULL);
+	ft_allocation(str, s, nword, c);
+	return (str);
+}
 
-// 	int i = 0;
-// 	while (str[i])
-// 		printf("%s\n", str[i++]);
-// }
+int main()
+{
+	char **p;
+	char sep = ' ';
+	int	x = 0;
+	int y = 0;
+	p = ft_split(" say  my name ", sep);
+	while (p[x][y])
+	{
+		while (p[y])
+		{
+			printf("%s", p[y]);
+			y++;
+		}
+		write(1, "\n", 1);
+		x++;
+	}
+}

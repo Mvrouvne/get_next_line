@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:51:27 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/25 18:51:48 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/28 19:47:29 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	// char			*str;
 	size_t	x;
 
-	 if (!s)
-	 	return ;
+	if (!s || !f)
+		return ;
 	x = 0;
 	while (x < ft_strlen(s))
 	{
@@ -38,7 +37,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 // {
 // 	void (*f)(unsigned int, char*);
 // 	f = &add;
-	
 // 	char s[] = "hello World";
 // 	ft_striteri(s, f);
 // 	printf("%s\n", s);

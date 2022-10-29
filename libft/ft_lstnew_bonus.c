@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 00:02:18 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/24 00:39:00 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/27 16:18:46 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/29 17:26:17 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *head;
+	t_list	*head;
 
-	head = NULL;
 	head = (t_list *)malloc(sizeof(t_list));
+	if (!head)
+		return (0);
 	head->content = content;
 	head->next = NULL;
-	return head;
+	return (head);
 }
-
-int main()
+ 
+int	main()
 {
-	int *content = 22;
-	printf("%ld\n", ft_lstnew(content)->content);
+	// int	*a = 22;
+	t_list	*k =ft_lstnew(ft_strdup("20"));
+	// free (k -> content);
+	// free (k);
+	printf("%s", k -> content);
 }

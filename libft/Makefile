@@ -6,7 +6,7 @@
 #    By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:16:49 by machaiba          #+#    #+#              #
-#    Updated: 2022/10/26 23:31:56 by machaiba         ###   ########.fr        #
+#    Updated: 2022/10/29 16:45:35 by machaiba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,6 @@ NAME = libft.a
 CC = cc
 
 AR = ar
-
-ARFLAGS = rc
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -56,14 +54,16 @@ SRCS = ft_atoi.c\
 		ft_striteri.c\
 		ft_split.c
 		
+		
+		
+		
 
 OBJ = $(SRCS:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
-	$(CC) $(CFLAGS) -c $(SRCS)
+	$(AR) -rc $(NAME) $(OBJ)
 	
 clean :
 	rm -rf $(OBJ)

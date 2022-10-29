@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 22:06:56 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/25 17:47:05 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/28 19:47:12 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	x;
 
 	x = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!str)

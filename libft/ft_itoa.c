@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 14:26:05 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/25 14:39:24 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/28 23:21:11 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	count(long int c)
 	{
 		c = c / 10;
 		x++;
-	} 
+	}
 	return (x);
 }
 
@@ -58,7 +58,3 @@ char	*ft_itoa(int u)
 	return (str);
 }
 
-int main()
-{
-	printf("%s", ft_itoa(-2147483648));
-}

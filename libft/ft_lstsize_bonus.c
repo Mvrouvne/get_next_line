@@ -1,26 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 18:33:06 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/29 15:54:42 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/28 00:47:22 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/29 21:43:12 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int	ft_lstsize(t_list *lst)
 {
-	void	*p;
-	
-	if (count && size > SIZE_MAX / count)
+	t_list	*ptr;
+	int		count;
+
+	if (lst == NULL)
 		return (0);
-	p = malloc(size * count);
-	if (!p)
-		return (0);
-	bzero(p, size * count);
-	return (p);
+	ptr = lst;
+	count = 0;
+	while (ptr != NULL)
+	{
+		count++;
+		ptr = ptr->next;
+	}
+	return (count);
 }
+
+// int main()
+// {
+// 	t_list *head = NULL;
+// 	int i = 0;
+// 	// head = ft_lstnew(ft_itoa(-1));
+// 	while (i < 10)
+// 	{
+// 		ft_lstadd_front(&head, ft_lstnew(ft_itoa(i)));
+// 		i++;
+// 	}
+// 	int size = ft_lstsize(head);
+// 	printf("size %d", size);
+// }
