@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 20:54:10 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/25 15:49:45 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 00:00:27 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[x] = '\0';
 	return (join);
 }
-// int main()
-// {
-// 	char *a = "Hello ";
-// 	char *b = "World!";
-
-// 	printf("%s", ft_strjoin(a, b));
-// }

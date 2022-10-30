@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:51:33 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/29 18:37:50 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 19:17:34 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,17 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int	main()
+int main()
 {
-	// char a[] = "mar";
-	// char b[] = "abcdef";
-	
-	// printf("%s", ft_memcpy(b,a, 3));
-
-
-
-	int k[] = {2147483648, 2};
-	int j[] = {5,6,7,8};
-	ft_memcpy(j,k,4);
-	int i =0;
-	while (i < 4)
-		printf("%d\n",j[i++]);
+	int a[] = {128, 3, 5};
+	char s[] = "hpllo";
+	char *p = memcpy(s, a, 4);
+	printf("%d", p[0]);
+	//memchr("say my name", 'z', 10);
 }
 
+/// 128 64 32 16 8 4 2 1 
+/// 00000001 111111110
 
 
 

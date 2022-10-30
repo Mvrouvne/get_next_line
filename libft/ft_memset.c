@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 23:23:27 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/29 17:39:15 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:29:14 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ void	*ft_memset(void *str, int c, size_t len)
 	return (str);
 }
 
-int main()
-{
-	int i[] = {  , 2, 3};
-	int a = 0;
-	ft_memset(i, 8, 2);
-	while (a < 3)
-	{
-		printf("%d\n", i[a]);
-		a++;
-	}
-}
+// int main()
+// {
+// 	int i[] = {  , 2, 3};
+// 	int a = 0;
+// 	ft_memset(i, 8, 2);
+// 	while (a < 3)
+// 	{
+// 		printf("%d\n", i[a]);
+// 		a++;
+// 	}
+// }

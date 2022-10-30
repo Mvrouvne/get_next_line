@@ -6,7 +6,7 @@
 #    By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:16:49 by machaiba          #+#    #+#              #
-#    Updated: 2022/10/29 16:45:35 by machaiba         ###   ########.fr        #
+#    Updated: 2022/10/30 22:44:58 by machaiba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,7 @@ SRCS = ft_atoi.c\
 		ft_itoa.c\
 		ft_strmapi.c\
 		ft_striteri.c\
-		ft_split.c
-		
+		ft_split.c		
 		
 		
 		

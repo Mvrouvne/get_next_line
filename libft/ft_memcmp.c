@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 12:36:31 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/28 23:48:03 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 21:08:26 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+int main()
+{
+	int a[] = {104, 3, 5};
+	char s[] = "ipllo";
+	int p = memcmp(a, s, 4);
+	printf("%d", p);
+	//memchr("say my name", 'z', 10);
+}
+/// 01101000
+//  01101000

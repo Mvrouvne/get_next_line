@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:59:25 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/29 22:43:25 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 00:43:12 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	wnumber(const char *str, char c)
 	return (nword);
 }
 
-void	ft_mar1(char **str, int nword)
+static void	ft_free(char **str, int nword)
 {
 	int	y;
 
@@ -63,7 +63,7 @@ void	ft_allocation(char **str, const char *s, int nword, char c)
 		str[y++] = ft_substr(s, index, x - index);
 	}
 	if (!str)
-		ft_mar1(str, nword);
+		ft_free(str, nword);
 	str[y] = NULL;
 }
 
@@ -80,23 +80,4 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	ft_allocation(str, s, nword, c);
 	return (str);
-}
-
-int main()
-{
-	char **p;
-	char sep = ' ';
-	int	x = 0;
-	int y = 0;
-	p = ft_split(" say  my name ", sep);
-	while (p[x][y])
-	{
-		while (p[y])
-		{
-			printf("%s", p[y]);
-			y++;
-		}
-		write(1, "\n", 1);
-		x++;
-	}
 }

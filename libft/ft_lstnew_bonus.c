@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:18:46 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/29 17:26:17 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:30:05 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ t_list	*ft_lstnew(void *content)
 	return (head);
 }
  
-int	main()
-{
-	// int	*a = 22;
-	t_list	*k =ft_lstnew(ft_strdup("20"));
-	// free (k -> content);
-	// free (k);
-	printf("%s", k -> content);
-}
+// int	main()
+// {
+// 	// int	*a = 22;
+// 	t_list	*k =ft_lstnew(ft_strdup("20"));
+// 	// free (k -> content);
+// 	// free (k);
+// 	printf("%s", k -> content);
+// }

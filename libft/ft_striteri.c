@@ -6,14 +6,14 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:51:27 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/28 19:47:29 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 19:50:35 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
+{	
 	size_t	x;
 
 	if (!s || !f)
@@ -25,6 +25,45 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		x++;
 	}
 }
+void fun(unsigned int i, char *s)
+{
+	printf("%c", s[i]);
+}
+
+int main()
+{
+	ft_striteri("hello", &fun);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // void	add(unsigned int a, char *b)
 // {

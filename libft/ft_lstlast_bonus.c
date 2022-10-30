@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 16:25:29 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/30 19:33:47 by machaiba         ###   ########.fr       */
+/*   Created: 2022/10/30 23:09:08 by machaiba          #+#    #+#             */
+/*   Updated: 2022/10/30 23:45:43 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd) // f
-{ 
-	long int	x;
-
-	x = n;
-	if (x < 0)
+t_list	*ft_lstlast(t_list *lst)
+{
+	while (lst)
 	{
-		x = x * -1;
-		write(fd, "-", 1);
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
 	}
-	if (x >= 0 && x <= 9)
-	{
-		x = x + '0';
-		write(fd, &x, 1);
-	}
-	else if (x >= 10)
-	{
-		ft_putnbr_fd(x / 10, fd);
-		ft_putnbr_fd(x % 10, fd);
-	}
+	return (lst);
 }
-
 int main()
 {
-	ft_putnbr_fd(2, 1); // f
-}
+	t_list *p = malloc(sizeof(t_list));
+	t_list *p1 = malloc(sizeof(t_list));
+	t_list *p2 = malloc(sizeof(t_list));
+	t_list *head;
+	
+	head = p;
+	p->next = p1;
+	p1->next = p2;
+	p2->next = NULL;
 
+	p->content = ft_strdup("marouan");
+	p1->content = ft_strdup("yassine");
+
+	ft_lstlast(head);
+	printf("%s\n", head->content);
+}

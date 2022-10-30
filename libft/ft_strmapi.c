@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 22:06:56 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/28 19:47:12 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 14:06:40 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[x] = '\0';
 	return (str);
 }
-
-// char	add(unsigned int a, char b)
-// {
-// 	(void) a;
-// 	if (b >= 'a' && b <= 'z')
-// 		b = b - 32;
-// 	return (b);
-// }
-
-// int	main()
-// {
-// 	char (*f)(unsigned int, char);
-// 	f = &add;
-// 	printf("%s", ft_strmapi("Hello World!", f));
-// }
