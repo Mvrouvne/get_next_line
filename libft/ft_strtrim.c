@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 21:30:17 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/21 23:38:27 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/31 18:40:26 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && compaire(s1[end], set))
 		end--;
 	if (end < 0)
-		return ((char *)s1);
+		return (ft_strdup(""));
 	trim = ft_substr(s1, start, (end - start) + 1);
 	return (trim);
 }

@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 23:09:08 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/30 23:45:43 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 23:49:50 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int main()
 	p2->next = NULL;
 
 	p->content = ft_strdup("marouan");
-	p1->content = ft_strdup("yassine");
+	p2->content = ft_strdup("yassine");
 
-	ft_lstlast(head);
-	printf("%s\n", head->content);
+	t_list *k = ft_lstlast(head);
+	printf("%s\n", k->content);
 }

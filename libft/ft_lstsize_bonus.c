@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 00:47:22 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/29 21:43:12 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/30 23:53:46 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,19 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
+int main()
+{
+	t_list *p = malloc(sizeof(t_list));
+	t_list *p1 = malloc(sizeof(t_list));
+	t_list *p2 = malloc(sizeof(t_list));
+	t_list *head;
+	
+	head = p;
+	p->next = p1;
+	p1->next = p2;
+	p2->next = NULL;
 
-// int main()
-// {
-// 	t_list *head = NULL;
-// 	int i = 0;
-// 	// head = ft_lstnew(ft_itoa(-1));
-// 	while (i < 10)
-// 	{
-// 		ft_lstadd_front(&head, ft_lstnew(ft_itoa(i)));
-// 		i++;
-// 	}
-// 	int size = ft_lstsize(head);
-// 	printf("size %d", size);
-// }
+
+	ft_lstsize(head);
+	printf("%d\n", ft_lstsize(head));
+}

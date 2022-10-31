@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 17:59:25 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/30 00:43:12 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/31 21:22:28 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void	ft_free(char **str, int nword)
 	free (str);
 }
 
-void	ft_allocation(char **str, const char *s, int nword, char c)
+static void	ft_allocation(char **str, const char *s, int nword, char c)
 {
 	int	y;
 	int	x;

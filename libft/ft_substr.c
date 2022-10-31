@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:36:29 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/30 16:36:21 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/10/31 18:36:17 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 
 	if (!str)
 		return (NULL);
-	if (len > ft_strlen(str))
-		len = ft_strlen(str);
+	if (start >= ft_strlen(str))
+		return (ft_strdup(""));
+	if (len + start > ft_strlen(str))
+		len = ft_strlen(str) - start;
 	subs = (char *)malloc(sizeof(char) * (len + 1));
 	if (!subs)
 		return (NULL);
-	if (start >= ft_strlen(str))
-		return (subs);
 	x = 0;
 	while (x < len)
 	{
