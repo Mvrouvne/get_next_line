@@ -6,14 +6,14 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 16:25:29 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/31 16:37:05 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/11/01 22:45:40 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd) // f
-{ 
+void	ft_putnbr_fd(int n, int fd)
+{
 	long int	x;
 
 	x = n;
@@ -33,5 +33,3 @@ void	ft_putnbr_fd(int n, int fd) // f
 		ft_putnbr_fd(x % 10, fd);
 	}
 }
-
-

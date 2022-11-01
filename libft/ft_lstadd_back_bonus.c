@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:25:43 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/31 22:48:58 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/11/01 22:35:08 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (!lst)
 		return ;
 	if (!(*lst))
-		*lst->new;
-	ft_lstlast(*lst)->next = new;
-}
-
-int	main()
-{
-	
+		*lst = new;
+	else
+	{
+		ft_lstlast(*lst)->next = new;
+	}
 }

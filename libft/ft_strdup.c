@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:53:52 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/30 18:44:57 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/11/01 19:41:47 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	int		len;
 	int		x;
 
-	len = strlen(s1);
+	len = ft_strlen(s1);
 	p = (char *)malloc(sizeof(char) * (len + 1));
 	if (!p)
 		return (NULL);

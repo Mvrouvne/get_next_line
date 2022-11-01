@@ -6,13 +6,13 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 14:26:05 by machaiba          #+#    #+#             */
-/*   Updated: 2022/10/28 23:21:11 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/11/01 23:06:02 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count(long int c)
+static int	ft_count(long int c)
 {
 	long int	x;
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int u)
 	int			sign;
 
 	sign = 0;
-	x = count(u);
+	x = ft_count(u);
 	n = u;
 	str = (char *)malloc(sizeof(char) * x + 1);
 	if (!str)
@@ -57,4 +57,3 @@ char	*ft_itoa(int u)
 	}
 	return (str);
 }
-

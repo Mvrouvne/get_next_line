@@ -6,7 +6,7 @@
 #    By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 22:16:49 by machaiba          #+#    #+#              #
-#    Updated: 2022/10/30 22:44:58 by machaiba         ###   ########.fr        #
+#    Updated: 2022/11/01 16:29:48 by machaiba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,20 +52,28 @@ SRCS = ft_atoi.c\
 		ft_itoa.c\
 		ft_strmapi.c\
 		ft_striteri.c\
-		ft_split.c		
-		
-		
-		
+		ft_split.c\
+
+SRCSB = ft_lstnew_bonus.c\
+		ft_lstsize_bonus.c\
+		ft_lstlast_bonus.c\
+		ft_lstadd_back_bonus.c\
+		ft_lstadd_front_bonus.c	
 
 OBJ = $(SRCS:.c=.o)
+
+OBJB = $(SRCSB:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(AR) -rc $(NAME) $(OBJ)
 	
+bonus : $(OBJB)
+	$(AR) -rc $(NAME) $(OBJB)
+
 clean :
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(OBJB)
 	
 fclean : clean
 	rm -rf $(NAME)
