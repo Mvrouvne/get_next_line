@@ -6,7 +6,7 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 00:29:04 by machaiba          #+#    #+#             */
-/*   Updated: 2022/11/09 14:23:40 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/11/10 16:25:21 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ size_t	ft_tohexa(size_t decimal, char *hex)
 	}
 	return (count);
 }
-
-// int main()
-// {
-// 	int x = ft_tohexa(-2147483647, "0123456789abcdef");
-// 	write (1, "\n", 1);
-// 	printf("%d", x);
-// 	printf("%p", -2147483647);
-// }

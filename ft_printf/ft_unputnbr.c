@@ -6,18 +6,16 @@
 /*   By: machaiba <machaiba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 22:14:43 by machaiba          #+#    #+#             */
-/*   Updated: 2022/11/09 14:22:04 by machaiba         ###   ########.fr       */
+/*   Updated: 2022/11/10 15:42:26 by machaiba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_unputnbr(unsigned int n)
+int	ft_unputnbr(unsigned int x)
 {
-	unsigned long int	x;
-	int					count;
+	int				count;
 
-	x = n;
 	count = 0;
 	if (x < 0)
 	{
